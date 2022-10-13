@@ -19,14 +19,14 @@
         </ul>
       </nav>
     </div>
-
+    
   <RouterView />
 </template>
 <script setup>
   import {ref} from 'vue'
   import { RouterLink, RouterView } from "vue-router";
-  import MenuIcon from "./components/MenuIcon.vue";
-  import NewsIcon from "./components/NewsIcon.vue"
+  import MenuIcon from "./components/Icons/MenuIcon.vue";
+  import NewsIcon from "./components/Icons/NewsIcon.vue"
       
   let showMenu = ref(false)
   function toggleNav() {
