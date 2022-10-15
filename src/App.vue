@@ -1,9 +1,9 @@
 <template>
     <div class="bg-red-700">
-      <nav class="container px-6 py-6 mx-auto md:flex md:justify-between md:items-center">
+      <nav class="container px-3 py-6 mx-auto md:flex md:justify-between md:items-center">
         <div class="flex items-center justify-between">
-          <RouterLink to="/" class="text-xl font-bold text-gray-100 md:text-2xl hover:text-green-400">
-            <NewsIcon />
+          <RouterLink to="/" class="text-xl flex items-center justify-center gap-1 font-bold text-gray-100 md:text-2xl hover:text-green-400">
+            <NewsIcon class="md:flex-row"/>climate NEWS
           </RouterLink>
           <!--Mobilemenu button-->
           <div @click="toggleNav" class="flex md:hidden">
@@ -16,6 +16,7 @@
           <li><RouterLink class="text-gray-100 hover:text-green-400" to="/">Home</RouterLink></li>
           <li><RouterLink class="text-gray-100 hover:text-green-400" to="/about">About</RouterLink></li>
           <li><RouterLink class="text-gray-100 hover:text-green-400" to="/news">News</RouterLink></li>
+          <MoonIcon/>
         </ul>
       </nav>
     </div>
@@ -27,6 +28,7 @@
   import { RouterLink, RouterView } from "vue-router";
   import MenuIcon from "./components/Icons/MenuIcon.vue";
   import NewsIcon from "./components/Icons/NewsIcon.vue"
+import MoonIcon from './components/Icons/MoonIcon.vue';
       
   let showMenu = ref(false)
   function toggleNav() {

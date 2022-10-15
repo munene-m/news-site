@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import News from "../views/News.vue"
 import About from "../views/About.vue"
+import pinia from "../stores/newStore"
+import { useNewsStore } from "../stores/newStore";
+const store = useNewsStore(pinia)
 
 
 const router = createRouter({
@@ -24,5 +27,6 @@ const router = createRouter({
     }
   ],
 });
+
 
 export default router;
