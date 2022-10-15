@@ -2,12 +2,11 @@
 import NewsCard from "../components/NewsCard.vue";
 import ArrowIcon from "../components/Icons/ArrowIcon.vue";
 import Footer from "../components/Footer.vue";
-// import LeftArrowIcon from '../Icons/LeftArrowIcon.vue';
 import { ref } from "vue";
 const apiKey = import.meta.env.VITE_NEWS_API_KEY
 let date = new Date();
 
-// const newsStore = useNewsStore()
+
 let datePublished0 = ref("");
 let source0 = ref("");
 let title0 = ref("")
