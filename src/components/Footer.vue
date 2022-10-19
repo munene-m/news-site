@@ -21,7 +21,7 @@ import { RouterLink, RouterView } from "vue-router";
                 md:items-start
               ">
            <NewsIcon class="w-6 md:w-6 mr-1 "/>
-           climate NEWS
+           crypto NEWS
             </h6>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

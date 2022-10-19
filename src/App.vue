@@ -3,7 +3,7 @@
       <nav class="container px-3 py-6 mx-auto md:flex md:justify-between md:items-center">
         <div class="flex items-center justify-between">
           <RouterLink to="/" class="text-xl flex items-center justify-center gap-1 font-bold text-gray-100 md:text-2xl hover:text-green-400">
-            <NewsIcon class="md:flex-row"/>climate NEWS
+            <NewsIcon class="md:flex-row"/>crypto NEWS
           </RouterLink>
           <!--Mobilemenu button-->
           <div @click="toggleNav" class="flex md:hidden">
