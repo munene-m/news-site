@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <footer class="text-center lg:text-left bg-gray-100 text-gray-600 mt-14 dark:bg-black dark:text-white">
+  <footer class="text-center lg:text-left bg-gray-200 text-gray-600  dark:bg-black dark:opacity-90 dark:text-white">
     <div class="mx-6 py-10 text-center md:text-left ">
       <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-20 gap-8">
         <div class="">
@@ -22,7 +22,7 @@ import { RouterLink, RouterView } from "vue-router";
             "
           >
             <NewsIcon class="w-6 md:w-6 mr-1" />
-            crypto NEWS
+            cryptoNEWS
           </h6>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
@@ -107,9 +107,9 @@ import { RouterLink, RouterView } from "vue-router";
         </div>
       </div>
     </div>
-    <div class="text-center p-6 bg-gray-200 dark:text-white dark:bg-black">
+    <div class="text-center p-6 bg-gray-300 dark:text-white dark:bg-gray-900 dark:opacity-40 ">
       <span>© 2022 Copyright:</span>
-      <a class="text-gray-600 font-semibold dark:text-white" href="https://github.com/munene-m"
+      <a class="text-gray-600 font-bold dark:text-white" href="https://github.com/munene-m"
         >Munene</a
       >
     </div>

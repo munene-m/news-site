@@ -8,9 +8,9 @@ const newsStore = useNewsStore()
 </script>
 
 <template>
-    <h1 class="text-3xl py-6 font-bold text-gray-700 text-center dark:bg-black dark:text-white">Top headlines in crypto</h1>
+    <h1 class="text-3xl py-6 font-bold text-gray-700 text-center dark:bg-black dark:opacity-90 dark:text-white">Top headlines in the cryptocurrency world.</h1>
     <hr>
-    <div class="grid grid-cols-1 px-8  justify-center md:grid-cols-3 md:gap-3 dark:bg-black">
+    <div class="grid grid-cols-1 px-8 pb-14 justify-center md:grid-cols-3 md:gap-3 dark:bg-black dark:opacity-90">
         <NewsCard/>
         <NewsCard>
             <template #image>
@@ -837,6 +837,33 @@ const newsStore = useNewsStore()
             </template>
             <template #date>
                 <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished30}}</p>
+            </template>
+            <template #url>
+                <a :href="newsStore.url30">
+                    <button class="bg-red-700 text-white mt-4 inline-block px-6 py-2.5 font-medium 
+                    text-xs leading-tight uppercase rounded shadow-md hover:bg-red-800
+                     hover:text-green-400 hover:shadow-lg focus:bg-red-800 focus:shadow-lg 
+                    focus:outline-none focus:ring-0 active:bg-red-900 active:shadow-lg transition
+                    duration-150 ease-in-out justify-center items-center hover:scale-95">Read more
+                    </button>
+                </a>
+            </template>
+        </NewsCard>
+        <NewsCard>
+            <template #image>
+                <img :src="newsStore.urlToImage31" class="rounded-t-lg" alt=""/>
+            </template>
+            <template #title>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title31}}</h5>
+            </template>
+            <template #description>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description31}}</p>
+            </template>
+            <template #source>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source31}}</p>
+            </template>
+            <template #date>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished31}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url30">

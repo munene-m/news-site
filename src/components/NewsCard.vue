@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center mt-5 ">
-    <div class="rounded-lg shadow-lg bg-white max-w-xs dark:text-white dark:bg-gray-900 dark:bg-opacity-40">
+    <div class="rounded-lg shadow-lg bg-white max-w-xs dark:text-white dark:bg-gray-900 dark:bg-opacity-20">
       <slot name="image">
         <img :src="newsStore.urlToImage" class="rounded-t-lg" alt=""/>
       </slot>
@@ -32,7 +32,6 @@
     </div>
 </template>
 <script setup>
-import LeftArrowIcon from './Icons/LeftArrowIcon.vue';
 import { useNewsStore } from "../stores/newStore"
 import { watchEffect } from "@vue/runtime-core";
 import { ref, watch } from 'vue';

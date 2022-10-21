@@ -2,9 +2,9 @@
 import Footer from "../components/Footer.vue";
 </script>
 <template>
-  <h1 class="text-3xl py-6 font-bold text-gray-700 text-center dark:text-white dark:bg-black">About us</h1>
+  <h1 class="text-3xl py-6 font-bold text-gray-700 text-center dark:text-white dark:bg-black dark:opacity-90">About us</h1>
   <hr />
-  <div class="about grid grid-cols-1 md:grid-cols-3  place-items-center dark:text-white dark:bg-black">
+  <div class="about grid grid-cols-1 md:grid-cols-3 pb-10 place-items-center dark:text-white dark:bg-black dark:opacity-90">
     <svg
       class="md:w-96 md:h-96 h-52 w-52"
       xmlns="http://www.w3.org/2000/svg"

@@ -3,7 +3,7 @@
       <nav class="container px-3 py-6 mx-auto md:flex md:justify-between md:items-center dark:text-gray-200">
         <div class="flex items-center justify-between">
           <RouterLink to="/" class="text-xl flex items-center justify-center gap-1 font-bold text-gray-100 md:text-2xl hover:text-green-400">
-            <NewsIcon class="md:flex-row"/>crypto NEWS
+            <NewsIcon class="md:flex-row"/>cryptoNEWS
           </RouterLink>
           <!--Mobilemenu button-->
           <div @click="toggleNav" class="flex md:hidden">
@@ -22,7 +22,7 @@
       </nav>
     </div>
     
-  <RouterView class="dark:text-white dark:bg-black"/>
+  <RouterView class="dark:text-white dark:bg-black dark:opacity-90"/>
 </template>
 <script setup>
   import {ref} from 'vue'

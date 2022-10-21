@@ -6,6 +6,8 @@ export default pinia
 
 export const useNewsStore = defineStore('stoe',{
     state: () => ({
+        apiKey: import.meta.env.VITE_NEWS_API_KEY, 
+
         title: "",
         description: "",
         url: "",
@@ -222,18 +224,25 @@ export const useNewsStore = defineStore('stoe',{
         urlToImage30: "",
         datePublished30: "",
         source30: "",
+
+        title31: "",
+        description31: "",
+        url31: "",
+        urlToImage31: "",
+        datePublished31: "",
+        source31: "",
     }),
     actions: {
          getTopHeadlines () {
-            fetch('https://newsapi.org/v2/everything?q=crypto&from=2022-10-14&sortBy=popularity&apiKey=79c312aee7bd45849389593d83d5e00a')
+            fetch(`https://newsapi.org/v2/everything?q=crypto&from=2022-10-14&sortBy=popularity&apiKey=${this.apiKey}`)
             .then(res => res.json())
             .then((res) => {
-              this.datePublished = res.articles[0].publishedAt;
-              this.source = res.articles[0].source.name;
-              this.description = res.articles[0].description
-              this.urlToImage = res.articles[0].urlToImage
-              this.title = res.articles[0].title
-              this.url = res.articles[0].url
+              this.datePublished = res.articles[50].publishedAt;
+              this.source = res.articles[50].source.name;
+              this.description = res.articles[50].description
+              this.urlToImage = res.articles[50].urlToImage
+              this.title = res.articles[50].title
+              this.url = res.articles[50].url
 
               this.datePublished1 = res.articles[1].publishedAt;
               this.source1 = res.articles[1].source.name;
@@ -452,9 +461,13 @@ export const useNewsStore = defineStore('stoe',{
               this.title30 = res.articles[30].title
               this.url30 = res.articles[30].url
 
-            }
-            
-            )
+              this.datePublished30 = res.articles[31].publishedAt;
+              this.source30 = res.articles[31].source.name;
+              this.description30 = res.articles[31].description
+              this.urlToImage30 = res.articles[31].urlToImage
+              this.title30 = res.articles[31].title
+              this.url30 = res.articles[31].url
+            })
             .catch(err => {
               console.log(err)
             })
