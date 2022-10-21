@@ -14,7 +14,7 @@ const newsStore = useNewsStore()
   <main>
     <div class="flex flex-col text-center justify-center pt-4">
       <h1 class="text-3xl py-6 font-bold text-gray-700 dark:text-white dark:bg-black">
-        Stay up to date with the latest climate change news.
+        Stay up to date with the latest cryptocurrency news from around the world.
       </h1>
       <hr />
     </div>
