@@ -1,4 +1,6 @@
-#  news-site
+## Description
+
+A news website that helps users stay in touch with trends and breaking news in the cryptocurrency industry
 
 This template should help get you started developing with Vue 3 in Vite.
 
