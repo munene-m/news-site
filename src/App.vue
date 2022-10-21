@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-red-700">
+    <div class="bg-red-700 dark:bg-black">
       <nav class="container px-3 py-6 mx-auto md:flex md:justify-between md:items-center dark:text-gray-200">
         <div class="flex items-center justify-between">
           <RouterLink to="/" class="text-xl flex items-center justify-center gap-1 font-bold text-gray-100 md:text-2xl hover:text-green-400">
@@ -16,8 +16,8 @@
           <li><RouterLink class="text-gray-100 hover:text-green-400" to="/">Home</RouterLink></li>
           <li><RouterLink class="text-gray-100 hover:text-green-400" to="/about">About</RouterLink></li>
           <li><RouterLink class="text-gray-100 hover:text-green-400" to="/news">News</RouterLink></li>
-          <MoonIcon @click="toggleDark()" v-if="!isDark"/>
-          <SunIcon @click="toggleDark()" v-if="isDark"/>
+          <MoonIcon @click="toggleDark()" v-if="!isDark" class="hover:text-green-400"/>
+          <SunIcon @click="toggleDark()" v-if="isDark" class="hover:text-green-400"/>
         </ul>
       </nav>
     </div>

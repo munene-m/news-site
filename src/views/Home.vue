@@ -20,11 +20,9 @@ const newsStore = useNewsStore()
     </div>
     <div>
       <p class="px-4 py-4 text-center md:px-20">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
-        recusandae cumque dicta fuga eius natus! Odit asperiores minus eos at
-        autem dolorem repudiandae, quos, architecto molestias voluptate officiis
-        quia adipisci iure ab, soluta numquam libero rem suscipit veritatis!
-        Possimus tempore porro vel. Atque, delectus molestiae.
+        We bring you the latest cryptocurrency news from all over the world from top media houses and 
+        help you stay informed on the trends and new innovations in the industry. Get all the breaking about Bitcoin,
+        Ethereum, NFTs, Solana and other topics such as the metaverse right here
       </p>
     </div>
     <h2 class="text-center py-16 text-4xl text-gray-700 font-serif underline dark:text-white">

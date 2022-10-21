@@ -461,12 +461,12 @@ export const useNewsStore = defineStore('stoe',{
               this.title30 = res.articles[30].title
               this.url30 = res.articles[30].url
 
-              this.datePublished30 = res.articles[31].publishedAt;
-              this.source30 = res.articles[31].source.name;
-              this.description30 = res.articles[31].description
-              this.urlToImage30 = res.articles[31].urlToImage
-              this.title30 = res.articles[31].title
-              this.url30 = res.articles[31].url
+              this.datePublished31 = res.articles[31].publishedAt;
+              this.source31 = res.articles[31].source.name;
+              this.description31 = res.articles[31].description
+              this.urlToImage31 = res.articles[31].urlToImage
+              this.title31 = res.articles[31].title
+              this.url31 = res.articles[31].url
             })
             .catch(err => {
               console.log(err)

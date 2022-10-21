@@ -185,12 +185,10 @@ import Footer from "../components/Footer.vue";
     </svg>
 
     <p class="md:col-span-2 text-gray-700 md:mt-30 mx-6 md:mx-8 text-center dark:text-white">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci veniam
-      debitis voluptatem repudiandae, rerum nihil exercitationem odit placeat
-      provident quo. Pariatur exercitationem eius architecto ratione porro
-      expedita veniam. Autem repellendus veritatis odio dolores consequuntur
-      magni placeat illum error delectus laudantium necessitatibus, sint
-      inventore iure distinctio earum nesciunt provident amet quibusdam.
+      We are among leading news sources regarding cryptocurrency and we bring you 24/7 coverage of
+      cryptocurrency trends and breaking news. We keep you informed in the stories that matter to you as 
+      a crypto enthusiast and we ensure credibility as these news are sourced from reputable journalists 
+      all around the world. 
     </p>
   </div>
   <Footer />
