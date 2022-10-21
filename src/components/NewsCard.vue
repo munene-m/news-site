@@ -1,21 +1,21 @@
 <template>
-  <div class="flex justify-center mt-5">
-    <div class="rounded-lg shadow-lg bg-white max-w-xs">
+  <div class="flex justify-center mt-5 ">
+    <div class="rounded-lg shadow-lg bg-white max-w-xs dark:text-white dark:bg-gray-900 dark:bg-opacity-40">
       <slot name="image">
         <img :src="newsStore.urlToImage" class="rounded-t-lg" alt=""/>
       </slot>
       <div class="m-4">
         <slot name="title">
-          <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title}}</h5>
+          <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title}}</h5>
         </slot>
         <slot name="description">
-          <p class="text-gray-700 text-lg mb-4">{{newsStore.description}}</p>
+          <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description}}</p>
         </slot>
         <slot name="source">
-        <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source}}</p>
+        <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source}}</p>
         </slot>
         <slot name="date">
-        <p class="text-gray-700">Date Published: {{newsStore.datePublished}}</p>
+        <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished}}</p>
        </slot>
        <slot name="url">
         <a :href="newsStore.url">

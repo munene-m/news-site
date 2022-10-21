@@ -8,25 +8,25 @@ const newsStore = useNewsStore()
 </script>
 
 <template>
-    <h1 class="text-3xl py-6 font-bold text-gray-700 text-center">Top headlines in crypto</h1>
+    <h1 class="text-3xl py-6 font-bold text-gray-700 text-center dark:bg-black dark:text-white">Top headlines in crypto</h1>
     <hr>
-    <div class="grid grid-cols-1 px-8 justify-center md:grid-cols-3 md:gap-3">
+    <div class="grid grid-cols-1 px-8  justify-center md:grid-cols-3 md:gap-3 dark:bg-black">
         <NewsCard/>
         <NewsCard>
             <template #image>
                 <img :src="newsStore.urlToImage1" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title1}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title1}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description1}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description1}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source1}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source1}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url1">
@@ -44,16 +44,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage2" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title2}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title2}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description2}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description2}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source2}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source2}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished2}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished2}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url2">
@@ -71,16 +71,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage3" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title3}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title3}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description3}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description3}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source3}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source3}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished3}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished3}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url3">
@@ -98,16 +98,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage4" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title4}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title4}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description4}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description4}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source4}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source4}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished4}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished4}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url4">
@@ -125,16 +125,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage5" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title5}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title5}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description5}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description5}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source5}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source5}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished5}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished5}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url5">
@@ -152,16 +152,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage6" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title6}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title6}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description6}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description6}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source6}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source6}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished6}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished6}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url6">
@@ -179,16 +179,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage7" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title7}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title7}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description7}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description7}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source7}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source7}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished7}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished7}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url7">
@@ -206,16 +206,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage8" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title8}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title8}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description8}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description8}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source8}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source8}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished8}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished8}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url8">
@@ -233,16 +233,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage9" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title9}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title9}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description9}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description9}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source9}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source9}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished9}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished9}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url9">
@@ -260,16 +260,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage10" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title10}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title10}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description10}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description10}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source10}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source10}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished10}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished10}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url10">
@@ -287,16 +287,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage11" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title11}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title11}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description11}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description11}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source11}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source11}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished11}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished11}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url11">
@@ -314,16 +314,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage12" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title12}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title12}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description12}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description12}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source12}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source12}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished12}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished12}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url12">
@@ -341,16 +341,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage13" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title13}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title13}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description13}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description13}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source13}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source13}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished13}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished13}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url13">
@@ -368,16 +368,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage14" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title14}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title14}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description14}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description14}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source14}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source14}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished14}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished14}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url14">
@@ -395,16 +395,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage15" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title15}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title15}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description15}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description15}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source15}} </p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source15}} </p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished15}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished15}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url15">
@@ -422,16 +422,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage16" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title16}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title16}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description16}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description16}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source16}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source16}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished16}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished16}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url16">
@@ -449,16 +449,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage17" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title17}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title17}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description17}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description17}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source17}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source17}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished17}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished17}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url17">
@@ -476,16 +476,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage18" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title18}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title18}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description18}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description18}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source18}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source18}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished18}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished18}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url18">
@@ -503,16 +503,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage19" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title19}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title19}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description19}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description19}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source19}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source19}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished19}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished19}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url19">
@@ -530,16 +530,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage20" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title20}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title20}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description20}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description20}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source20}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source20}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished20}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished20}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url20">
@@ -557,16 +557,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage21" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title21}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title21}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description21}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description21}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source21}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source21}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished21}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished21}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url21">
@@ -584,16 +584,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage22" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title22}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title22}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description22}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description22}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source22}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source22}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished22}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished22}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url22">
@@ -611,16 +611,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage22" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title22}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title22}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description22}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description22}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source22}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source22}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished22}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished22}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url22">
@@ -638,16 +638,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage23" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title23}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title23}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description23}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description23}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source23}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source23}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished23}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished23}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url23">
@@ -665,16 +665,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage24" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title24}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title24}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description24}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description24}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source24}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source24}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished24}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished24}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url24">
@@ -692,16 +692,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage25" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title25}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title25}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description25}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description25}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source25}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source25}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished25}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished25}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url25">
@@ -719,16 +719,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage26" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title26}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title26}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description26}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description26}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source26}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source26}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished26}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished26}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url26">
@@ -746,16 +746,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage27" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title27}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title27}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description27}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description27}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source27}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source27}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished27}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished27}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url27">
@@ -773,16 +773,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage28" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title28}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title28}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description28}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description28}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source28}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source28}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished28}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished28}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url28">
@@ -800,16 +800,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage29" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title29}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title29}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description29}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description29}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source29}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source29}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished29}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished29}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url29">
@@ -827,16 +827,16 @@ const newsStore = useNewsStore()
                 <img :src="newsStore.urlToImage30" class="rounded-t-lg" alt=""/>
             </template>
             <template #title>
-                <h5 class="text-gray-900 text-xl font-medium mb-2">{{newsStore.title30}}</h5>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title30}}</h5>
             </template>
             <template #description>
-                <p class="text-gray-700 text-lg mb-4">{{newsStore.description30}}</p>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description30}}</p>
             </template>
             <template #source>
-                <p class="pb-4 text-gray-700 font-semibold">Source: {{newsStore.source30}}</p>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source30}}</p>
             </template>
             <template #date>
-                <p class="text-gray-700">Date Published: {{newsStore.datePublished30}}</p>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished30}}</p>
             </template>
             <template #url>
                 <a :href="newsStore.url30">

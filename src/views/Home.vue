@@ -3,108 +3,17 @@ import NewsCard from "../components/NewsCard.vue";
 import ArrowIcon from "../components/Icons/ArrowIcon.vue";
 import Footer from "../components/Footer.vue";
 import { ref } from "vue";
-const apiKey = import.meta.env.VITE_NEWS_API_KEY;
-let date = new Date();
+import { useNewsStore } from "../stores/newStore";
 
-let datePublished0 = ref("");
-let source0 = ref("");
-let title0 = ref("");
-let description0 = ref("");
-let urltoImage0 = ref("");
+const newsStore = useNewsStore()
 
-let datePublished1 = ref("");
-let source1 = ref("");
-let title1 = ref("");
-let description1 = ref("");
-let urltoImage1 = ref("");
 
-let datePublished2 = ref("");
-let source2 = ref("");
-let title2 = ref("");
-let description2 = ref("");
-let urltoImage2 = ref("");
-
-let datePublished3 = ref("");
-let source3 = ref("");
-let title3 = ref("");
-let description3 = ref("");
-let urltoImage3 = ref("");
-
-let datePublished4 = ref("");
-let source4 = ref("");
-let title4 = ref("");
-let description4 = ref("");
-let urltoImage4 = ref("");
-
-let datePublished5 = ref("");
-let source5 = ref("");
-let title5 = ref("");
-let description5 = ref("");
-let urltoImage5 = ref("");
-
-const readArticle = () => {
-  window.location.href = url0;
-};
-
-async function getTrendingArticles() {
-  await fetch(
-    `https://newsapi.org/v2/everything?q=crypto&from=${date}&sortBy=popularity&apiKey=${apiKey}`
-  )
-    .then((res) => res.json())
-    .then((response) => {
-      datePublished0.value = response.articles[0].publishedAt;
-      source0.value = response.articles[0].source.name;
-      title0.value = response.articles[0].title;
-      description0.value = response.articles[0].description;
-      urltoImage0.value = response.articles[0].urlToImage;
-
-      datePublished1.value = response.articles[1].publishedAt;
-      source1.value = response.articles[1].source.name;
-      title1.value = response.articles[1].title;
-      description1.value = response.articles[1].description;
-      urltoImage1.value = response.articles[1].urlToImage;
-
-      datePublished2.value = response.articles[2].publishedAt;
-      source2.value = response.articles[2].source.name;
-      title2.value = response.articles[2].title;
-      description2.value = response.articles[2].description;
-      urltoImage2.value = response.articles[2].urlToImage;
-
-      datePublished3.value = response.articles[3].publishedAt;
-      source3.value = response.articles[3].source.name;
-      title3.value = response.articles[3].title;
-      description3.value = response.articles[3].description;
-      urltoImage3.value = response.articles[3].urlToImage;
-
-      datePublished4.value = response.articles[4].publishedAt;
-      source4.value = response.articles[4].source.name;
-      title4.value = response.articles[4].title;
-      description4.value = response.articles[4].description;
-      urltoImage4.value = response.articles[4].urlToImage;
-
-      datePublished5.value = response.articles[5].publishedAt;
-      source5.value = response.articles[5].source.name;
-      title5.value = response.articles[5].title;
-      description5.value = response.articles[5].description;
-      urltoImage5.value = response.articles[5].urlToImage;
-
-      console.log(response.articles.find(function (article){
-        return article = "{1:{source}}"
-      }))
-      console.log(response.articles);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-}
-
-getTrendingArticles();
 </script>
 
 <template>
   <main>
     <div class="flex flex-col text-center justify-center pt-4">
-      <h1 class="text-3xl py-6 font-bold text-gray-700">
+      <h1 class="text-3xl py-6 font-bold text-gray-700 dark:text-white dark:bg-black">
         Stay up to date with the latest climate change news.
       </h1>
       <hr />
@@ -118,289 +27,155 @@ getTrendingArticles();
         Possimus tempore porro vel. Atque, delectus molestiae.
       </p>
     </div>
-    <h2 class="text-center py-16 text-4xl text-gray-700 font-serif underline">
+    <h2 class="text-center py-16 text-4xl text-gray-700 font-serif underline dark:text-white">
       Trending articles
     </h2>
     <div class="grid grid-cols-1 px-8 justify-center md:grid-cols-3 md:gap-3">
       <!-- grid items -->
-      <div class="flex justify-center mt-5">
-        <div class="rounded-lg shadow-lg bg-white max-w-xs">
-          <img :src="urltoImage0" class="rounded-t-lg" alt="" />
-          <div class="m-4">
-            <h5 class="text-gray-900 text-xl font-medium mb-2">
-              {{ title0 }}
-            </h5>
-            <p class="text-gray-700 text-lg mb-4">
-              {{ description0 }}
-            </p>
-            <p class="pb-4 text-gray-700">Source: {{ source0 }}</p>
-            <p class="text-gray-700">Date Published: {{ datePublished0 }}</p>
-
-            <p class="text-gray-700 pt-4"></p>
-
-            <button
-              @click="readArticle"
-              class="
-                bg-red-700
-                text-white
-                mt-4
-                inline-block
-                px-6
-                py-2.5
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                rounded
-                shadow-md
-                hover:bg-red-800 hover:text-green-400 hover:shadow-lg
-                focus:bg-red-800 focus:shadow-lg focus:outline-none focus:ring-0
-                active:bg-red-900 active:shadow-lg
-                transition
-                duration-150
-                ease-in-out
-                justify-center
-                items-center
-                hover:scale-95
-              "
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center mt-5">
-        <div class="rounded-lg shadow-lg bg-white max-w-xs">
-          <img :src="urltoImage1" class="rounded-t-lg" alt="" />
-          <div class="m-4">
-            <h5 class="text-gray-900 text-xl font-medium mb-2">
-              {{ title1 }}
-            </h5>
-            <p class="text-gray-700 text-lg mb-4">
-              {{ description1 }}
-            </p>
-            <p class="pb-4 text-gray-700">Source: {{ source1 }}</p>
-            <p class="text-gray-700">Date Published: {{ datePublished1 }}</p>
-
-            <p class="text-gray-700 pt-4"></p>
-
-            <button
-              class="
-                bg-red-700
-                text-white
-                mt-4
-                inline-block
-                px-6
-                py-2.5
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                rounded
-                shadow-md
-                hover:bg-red-800 hover:text-green-400 hover:shadow-lg
-                focus:bg-red-800 focus:shadow-lg focus:outline-none focus:ring-0
-                active:bg-red-900 active:shadow-lg
-                transition
-                duration-150
-                ease-in-out
-                justify-center
-                items-center
-                hover:scale-95
-              "
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center mt-5">
-        <div class="rounded-lg shadow-lg bg-white max-w-xs">
-          <img :src="urltoImage2" class="rounded-t-lg" alt="" />
-          <div class="m-4">
-            <h5 class="text-gray-900 text-xl font-medium mb-2">
-              {{ title2 }}
-            </h5>
-            <p class="text-gray-700 text-lg mb-4">
-              {{ description2 }}
-            </p>
-            <p class="pb-4 text-gray-700">Source: {{ source2 }}</p>
-            <p class="text-gray-700">Date Published: {{ datePublished2 }}</p>
-
-            <p class="text-gray-700 pt-4"></p>
-
-            <button
-              class="
-                bg-red-700
-                text-white
-                mt-4
-                inline-block
-                px-6
-                py-2.5
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                rounded
-                shadow-md
-                hover:bg-red-800 hover:text-green-400 hover:shadow-lg
-                focus:bg-red-800 focus:shadow-lg focus:outline-none focus:ring-0
-                active:bg-red-900 active:shadow-lg
-                transition
-                duration-150
-                ease-in-out
-                justify-center
-                items-center
-                hover:scale-95
-              "
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center mt-5">
-        <div class="rounded-lg shadow-lg bg-white max-w-xs">
-          <img :src="urltoImage3" class="rounded-t-lg" alt="" />
-          <div class="m-4">
-            <h5 class="text-gray-900 text-xl font-medium mb-2">
-              {{ title3 }}
-            </h5>
-            <p class="text-gray-700 text-lg mb-4">
-              {{ description3 }}
-            </p>
-            <p class="pb-4 text-gray-700">Source: {{ source3 }}</p>
-            <p class="text-gray-700">Date Published: {{ datePublished3 }}</p>
-
-            <p class="text-gray-700 pt-4"></p>
-
-            <button
-              class="
-                bg-red-700
-                text-white
-                mt-4
-                inline-block
-                px-6
-                py-2.5
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                rounded
-                shadow-md
-                hover:bg-red-800 hover:text-green-400 hover:shadow-lg
-                focus:bg-red-800 focus:shadow-lg focus:outline-none focus:ring-0
-                active:bg-red-900 active:shadow-lg
-                transition
-                duration-150
-                ease-in-out
-                justify-center
-                items-center
-                hover:scale-95
-              "
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center mt-5">
-        <div class="rounded-lg shadow-lg bg-white max-w-xs">
-          <img :src="urltoImage4" class="rounded-t-lg" alt="" />
-          <div class="m-4">
-            <h5 class="text-gray-900 text-xl font-medium mb-2">
-              {{ title4 }}
-            </h5>
-            <p class="text-gray-700 text-lg mb-4">
-              {{ description4 }}
-            </p>
-            <p class="pb-4 text-gray-700">Source: {{ source4 }}</p>
-            <p class="text-gray-700">Date Published: {{ datePublished4 }}</p>
-
-            <p class="text-gray-700 pt-4"></p>
-
-            <button
-              class="
-                bg-red-700
-                text-white
-                mt-4
-                inline-block
-                px-6
-                py-2.5
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                rounded
-                shadow-md
-                hover:bg-red-800 hover:text-green-400 hover:shadow-lg
-                focus:bg-red-800 focus:shadow-lg focus:outline-none focus:ring-0
-                active:bg-red-900 active:shadow-lg
-                transition
-                duration-150
-                ease-in-out
-                justify-center
-                items-center
-                hover:scale-95
-              "
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center mt-5">
-        <div class="rounded-lg shadow-lg bg-white max-w-xs">
-          <img :src="urltoImage5" class="rounded-t-lg" alt="" />
-          <div class="m-4">
-            <h5 class="text-gray-900 text-xl font-medium mb-2">
-              {{ title5 }}
-            </h5>
-            <p class="text-gray-700 text-lg mb-4">
-              {{ description5 }}
-            </p>
-            <p class="pb-4 text-gray-700">Source: {{ source5 }}</p>
-            <p class="text-gray-700">Date Published: {{ datePublished5 }}</p>
-
-            <p class="text-gray-700 pt-4"></p>
-
-            <button
-              class="
-                bg-red-700
-                text-white
-                mt-4
-                inline-block
-                px-6
-                py-2.5
-                font-medium
-                text-xs
-                leading-tight
-                uppercase
-                rounded
-                shadow-md
-                hover:bg-red-800 hover:text-green-400 hover:shadow-lg
-                focus:bg-red-800 focus:shadow-lg focus:outline-none focus:ring-0
-                active:bg-red-900 active:shadow-lg
-                transition
-                duration-150
-                ease-in-out
-                justify-center
-                items-center
-                hover:scale-95
-              "
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-      </div>
+      <NewsCard/>
+        <NewsCard>
+          <template #image>
+              <img :src="newsStore.urlToImage1" class="rounded-t-lg" alt=""/>  
+            </template>
+            <template #title>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title1}}</h5>
+            </template>
+            <template #description>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description1}}</p>
+            </template>
+            <template #source>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source1}}</p>
+            </template>
+            <template #date>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished}}</p>
+            </template>
+            <template #url>
+                <a :href="newsStore.url1">
+                    <button class="bg-red-700 text-white mt-4 inline-block px-6 py-2.5 font-medium 
+                    text-xs leading-tight uppercase rounded shadow-md hover:bg-red-800
+                     hover:text-green-400 hover:shadow-lg focus:bg-red-800 focus:shadow-lg 
+                    focus:outline-none focus:ring-0 active:bg-red-900 active:shadow-lg transition
+                    duration-150 ease-in-out justify-center items-center hover:scale-95">Read more
+                    </button>
+                </a>
+            </template>
+        </NewsCard>
+        <NewsCard>
+            <template #image>
+                <img :src="newsStore.urlToImage2" class="rounded-t-lg" alt=""/>
+            </template>
+            <template #title>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title2}}</h5>
+            </template>
+            <template #description>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description2}}</p>
+            </template>
+            <template #source>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source2}}</p>
+            </template>
+            <template #date>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished2}}</p>
+            </template>
+            <template #url>
+                <a :href="newsStore.url2">
+                    <button class="bg-red-700 text-white mt-4 inline-block px-6 py-2.5 font-medium 
+                    text-xs leading-tight uppercase rounded shadow-md hover:bg-red-800
+                     hover:text-green-400 hover:shadow-lg focus:bg-red-800 focus:shadow-lg 
+                    focus:outline-none focus:ring-0 active:bg-red-900 active:shadow-lg transition
+                    duration-150 ease-in-out justify-center items-center hover:scale-95">Read more
+                    </button>
+                </a>
+            </template>
+        </NewsCard>
+        <NewsCard>
+            <template #image>
+                <img :src="newsStore.urlToImage3" class="rounded-t-lg" alt=""/>
+            </template>
+            <template #title>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title3}}</h5>
+            </template>
+            <template #description>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description3}}</p>
+            </template>
+            <template #source>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source3}}</p>
+            </template>
+            <template #date>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished3}}</p>
+            </template>
+            <template #url>
+                <a :href="newsStore.url3">
+                    <button class="bg-red-700 text-white mt-4 inline-block px-6 py-2.5 font-medium 
+                    text-xs leading-tight uppercase rounded shadow-md hover:bg-red-800
+                     hover:text-green-400 hover:shadow-lg focus:bg-red-800 focus:shadow-lg 
+                    focus:outline-none focus:ring-0 active:bg-red-900 active:shadow-lg transition
+                    duration-150 ease-in-out justify-center items-center hover:scale-95">Read more
+                    </button>
+                </a>
+            </template>
+        </NewsCard>
+        <NewsCard>
+            <template #image>
+                <img :src="newsStore.urlToImage4" class="rounded-t-lg" alt=""/>
+            </template>
+            <template #title>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title4}}</h5>
+            </template>
+            <template #description>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description4}}</p>
+            </template>
+            <template #source>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source4}}</p>
+            </template>
+            <template #date>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished4}}</p>
+            </template>
+            <template #url>
+                <a :href="newsStore.url4">
+                    <button class="bg-red-700 text-white mt-4 inline-block px-6 py-2.5 font-medium 
+                    text-xs leading-tight uppercase rounded shadow-md hover:bg-red-800
+                     hover:text-green-400 hover:shadow-lg focus:bg-red-800 focus:shadow-lg 
+                    focus:outline-none focus:ring-0 active:bg-red-900 active:shadow-lg transition
+                    duration-150 ease-in-out justify-center items-center hover:scale-95">Read more
+                    </button>
+                </a>
+            </template>
+        </NewsCard>
+        <NewsCard>
+            <template #image>
+                <img :src="newsStore.urlToImage5" class="rounded-t-lg" alt=""/>
+            </template>
+            <template #title>
+                <h5 class="text-gray-900 text-xl font-medium mb-2 dark:text-white">{{newsStore.title5}}</h5>
+            </template>
+            <template #description>
+                <p class="text-gray-700 text-lg mb-4 dark:text-white">{{newsStore.description5}}</p>
+            </template>
+            <template #source>
+                <p class="pb-4 text-gray-700 font-semibold dark:text-white">Source: {{newsStore.source5}}</p>
+            </template>
+            <template #date>
+                <p class="text-gray-700 dark:text-white">Date Published: {{newsStore.datePublished5}}</p>
+            </template>
+            <template #url>
+                <a :href="newsStore.url5">
+                    <button class="bg-red-700 text-white mt-4 inline-block px-6 py-2.5 font-medium 
+                    text-xs leading-tight uppercase rounded shadow-md hover:bg-red-800
+                     hover:text-green-400 hover:shadow-lg focus:bg-red-800 focus:shadow-lg 
+                    focus:outline-none focus:ring-0 active:bg-red-900 active:shadow-lg transition
+                    duration-150 ease-in-out justify-center items-center hover:scale-95">Read more
+                    </button>
+                </a>
+            </template>
+        </NewsCard>
     </div>
+ 
 
     <div>
-      <h3 class="text-center mt-12 text-4xl text-gray-700 font-serif underline">
+      <h3 class="text-center mt-12 text-4xl text-gray-700 font-serif underline dark:text-white md:dark:mb-8">
         Our sources
       </h3>
-      <div class="grid place-items-center grid-cols-2 md:grid-cols-6 my-16">
+      <div class="grid place-items-center grid-cols-2 mx-3 rounded md:grid-cols-4 my-16 dark:opacity-70 dark:py-6 md:dark:w-3/4 md:dark:m-auto md:dark:rounded dark:bg-white">
         <a href="https://bbc.com"
           ><svg
             class="h-16 w-16"
