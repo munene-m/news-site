@@ -185,9 +185,9 @@ import Footer from "../components/Footer.vue";
     </svg>
 
     <p class="md:col-span-2 text-gray-700 md:mt-30 mx-6 md:mx-8 text-center dark:text-white">
-      We are among leading news sources regarding cryptocurrency and we bring you 24/7 coverage of
-      cryptocurrency trends and breaking news. We keep you informed in the stories that matter to you as 
-      a crypto enthusiast and we ensure credibility as these news are sourced from reputable journalists 
+      We are among leading news sources regarding technology and we bring you 24/7 coverage of
+      tech trends and breaking news. We keep you informed in the stories that matter to you as 
+      a tech enthusiast and we ensure credibility as these news are sourced from reputable journalists 
       all around the world. 
     </p>
   </div>

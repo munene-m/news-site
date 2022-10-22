@@ -22,7 +22,7 @@ import { RouterLink, RouterView } from "vue-router";
             "
           >
             <NewsIcon class="w-6 md:w-6 mr-1" />
-            cryptoNEWS
+            techNEWS
           </h6>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
