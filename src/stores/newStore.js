@@ -90,13 +90,13 @@ export const useNewsStore = defineStore('stoe',{
     }),
     actions: {
          getTopHeadlines () {
-            fetch(`https://gnews.io/api/v4/top-headlines?token=${this.apiKey}&lang=en&topic=technology`)
+            fetch(`https://newsapi.org/v2/top-headlines?q=Climate&from=2022-10-14&sortBy=popularity&apiKey=${this.apiKey}`)
             .then(res => res.json())
             .then((res) => {
               this.datePublished = res.articles[0].publishedAt;
               this.source = res.articles[0].source.name;
               this.description = res.articles[0].description
-              this.urlToImage = res.articles[0].image
+              this.urlToImage = res.articles[0].urlToImage
               this.title = res.articles[0].title
               this.url = res.articles[0].url
 

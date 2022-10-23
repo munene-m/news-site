@@ -1,0 +1,7 @@
+[[redirects]]
+    from = "/news", "/"
+    to = "https://newsapi.org"
+    status = 200
+    force = true
+    headers = {79c312aee7bd45849389593d83d5e00a = "Netlify"}
+
