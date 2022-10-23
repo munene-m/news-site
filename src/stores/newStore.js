@@ -90,7 +90,7 @@ export const useNewsStore = defineStore('stoe',{
     }),
     actions: {
          getTopHeadlines () {
-            fetch(`https://newsapi.org/v2/top-headlines?q=Climate&from=2022-10-14&sortBy=popularity&apiKey=${this.apiKey}`)
+            fetch(`https://newsapi.org/v2/top-headlines?q=cryptocurrency&from=2022-10-14&sortBy=popularity&apiKey=${this.apiKey}`)
             .then(res => res.json())
             .then((res) => {
               this.datePublished = res.articles[0].publishedAt;
