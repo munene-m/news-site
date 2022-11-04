@@ -174,7 +174,7 @@ export const useNewsStore = defineStore('stoe',{
     }),
     actions: {
          getTopHeadlines () {
-            fetch(`http://api.mediastack.com/v1/news?access_key=${this.apiKey}&languages=en&date=2021-07-24,${this.dateNow}&categories=technology`)
+            fetch(`https://api.mediastack.com/v1/news?access_key=${this.apiKey}&languages=en&date=2021-07-24,${this.dateNow}&categories=technology`)
             .then(res => res.json())
             .then((res) => {
               console.log(res)
