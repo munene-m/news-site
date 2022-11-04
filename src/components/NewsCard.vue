@@ -2,7 +2,8 @@
   <div class="flex justify-center mt-5 ">
     <div class="rounded-lg shadow-lg bg-white max-w-xs dark:text-white dark:bg-gray-900 dark:bg-opacity-20">
       <slot name="image">
-        <img :src="newsStore.urlToImage" class="rounded-t-lg" alt=""/>
+        <img v-if="newsStore.image" :src="newsStore.image" class="rounded-t-lg" alt=""/>
+        <img v-else src="../assets/default.jpg" alt="">
       </slot>
       <div class="m-4">
         <slot name="title">
